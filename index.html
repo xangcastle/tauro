@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="assets/js/scrollIt.min.js"></script>
     <script type="text/javascript" src="assets/js/wow.js"></script>
@@ -19,17 +20,42 @@
 <body>
 
 <div class="wrapper">
-    <header data-scroll-index="1" class="wow animated fadeIn">
-        <div class="logo mobil-menu">
-            <figure><img src="assets/img/logo.png" alt="logo"></figure>
+    <header data-scroll-index="1">
+        <div class="top-header">
+            <div class="logo mobil-menu">
+                <figure><img src="assets/img/logo.png" alt="logo"></figure>
+            </div>
+
+            <div class="contacto wow animated zoomIn">
+                <p><i class="fa fa-whatsapp"></i> 505 8823 8477</p>
+                <p><i class="fa fa-envelope"></i> admin@grupotauro.com</p>
+                <p><i class="fa fa-skype"></i> grupotauro</p>
+            </div>
         </div>
-        <nav>
-            <a href="#" data-scroll-nav="1">Inicio</a>
-            <a href="#" data-scroll-nav="2">Servicios</a>
-            <a href="#" data-scroll-nav="3">Nosotros</a>
-            <a href="#" data-scroll-nav="4">Contacto</a>
-        </nav>
+        <div class="main-menu">
+            <nav class="menu" role="navigation">
+                <ol>
+                    <li class="menu-item"><a href="#" data-scroll-nav="1">Inicio</a></li>
+                    <li class="menu-item">
+                        <a href="#" data-scroll-nav="2">Nuestros servicios</a>
+                        <ol class="sub-menu" aria-label="submenu">
+                            <li class="menu-item"><a href="#" data-scroll-nav="3">Servicios generales</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="4">Limpiezas comerciales</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="5">Limpieza del hogar</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="6">Servicios profesionales</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="7">Asesoría legal</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="8">Asesoría administrativa</a></li>
+                            <li class="menu-item"><a href="#" data-scroll-nav="9">Servicios contables</a></li>
+                        </ol>
+                    </li>
+                    <li class="menu-item"><a href="#" data-scroll-nav="10">Nosotros</a></li>
+                    <li class="menu-item"><a href="#" data-scroll-nav="11">Contacto</a></li>
+                </ol>
+            </nav>
+        </div>
     </header>
+
+    <section id="inicio"></section>
 
     <nav class="mobil-nav">
         <ul>
@@ -48,14 +74,10 @@
         </ul>
     </nav>
 
-    <section id="inicio" class="wow animated fadeIn">
-
-    </section>
-
-    <section id="servicios" data-scroll-index="2">
-        <h2 class="wow animated rollIn">Servicios Generales</h2>
-        <div class="servicios-generales">
-            <div class="servicio wow animated zoomIn">
+    <section id="servicios">
+        <h2 class="wow animated rollIn" data-scroll-index="2">Nuestros servicios</h2>
+        <div class="servicios-generales" data-scroll-index="3">
+            <div class="servicio wow animated zoomIn"  data-scroll-index="4">
                 <div class="servicio-container">
                     <figure><img src="assets/img/principal.jpg" alt="Limpiezas Comerciales"></figure>
                     <div class="servicio-descripcion">
@@ -79,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="servicio wow animated zoomIn">
+            <div class="servicio wow animated zoomIn"  data-scroll-index="5">
                 <div class="servicio-container">
                     <div class="servicio-descripcion">
                         <h3>Servicios de Limpiezas para el Hogar</h3>
@@ -102,10 +124,9 @@
                 </div>
             </div>
         </div>
-        <h2 class="wow animated rollIn">Servicios Profesionales</h2>
+        <h2 class="wow animated rollIn" data-scroll-index="6">Servicios Profesionales</h2>
         <div class="servicios-profesionales">
-
-            <div class="servicio wow animated zoomIn">
+            <div class="servicio wow animated zoomIn" data-scroll-index="7">
                 <h3>Asesoria Legal</h3>
                 <figure>
                     <img src="assets/img/asesoria.legal.png" alt="Asesoria Legal">
@@ -117,7 +138,7 @@
                     </caption>
                 </figure>
             </div>
-            <div class="servicio wow animated zoomIn">
+            <div class="servicio wow animated zoomIn" data-scroll-index="8">
                 <h3>Asesoria Administrativa</h3>
                 <figure>
                     <img src="assets/img/asesoria.administrativa.png" alt="Asesoria administrativa">
@@ -133,7 +154,7 @@
                     </caption>
                 </figure>
             </div>
-            <div class="servicio wow animated zoomIn">
+            <div class="servicio wow animated zoomIn" data-scroll-index="9">
                 <h3>Servicios Contables</h3>
                 <figure>
                     <img src="assets/img/servicios.contables.jpg" alt="Servicios Contables">
@@ -146,12 +167,13 @@
             </div>
         </div>
     </section>
+
 </div>
 
 
 <footer>
     <div class="wallpaper">
-        <section id="nosotros" data-scroll-index="3" class="wow animated fadeIn">
+        <section id="nosotros" data-scroll-index="10" class="wow animated fadeIn">
             <h3>Nosotros</h3>
             <p>Grupo Tauro es una iniciativa de capital nicaragüense que nace como opción en el sector de servicios para
                 las diferentes instituciones y compañías. </p>
@@ -193,11 +215,11 @@
         <figure>
             <img src="assets/img/logo.blanco.png" alt="">
         </figure>
-        <div class="contacto wow animated zoomIn" id="contacto" data-scroll-index="4">
+        <div class="contacto wow animated zoomIn" id="contacto" data-scroll-index="11">
             <h3>Contacto</h3>
-            <p>Tel/Whatsapp: 505 8823 8477</p>
-            <p>Email: admin@grupotauro.com</p>
-            <p>Skype: grupotauro</p>
+            <p><i class="fa fa-whatsapp"></i> 505 8823 8477</p>
+            <p><i class="fa fa-envelope"></i> admin@grupotauro.com</p>
+            <p><i class="fa fa-skype"></i> grupotauro</p>
         </div>
     </div>
 </footer>

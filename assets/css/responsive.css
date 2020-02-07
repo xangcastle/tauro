@@ -51,14 +51,18 @@
   .wrapper header {
     grid-template-columns: 1fr;
   }
-  .wrapper header .logo figure {
+  .wrapper header .top-header .logo figure {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
-  .wrapper header .logo figure img {
+  .wrapper header .top-header .logo figure img {
     max-height: 125px !important;
   }
-  .wrapper header nav {
+  .wrapper header .top-header .contacto {
+    display: none;
+  }
+  .wrapper header .main-menu {
     display: none;
   }
   .wrapper .mobil-nav {

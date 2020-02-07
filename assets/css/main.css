@@ -11,27 +11,84 @@ body {
   margin: 0 auto;
 }
 .wrapper header {
-  display: grid;
-  grid-template-columns: 250px 200px auto;
-  grid-template-areas: "logo offset nav";
+  position: relative;
 }
-.wrapper header .logo {
+.wrapper header .top-header {
+  display: grid;
+  grid-template-columns: 250px auto 250px;
+  grid-template-areas: "logo offset contacto";
+}
+.wrapper header .top-header .logo {
   grid-area: logo;
 }
-.wrapper header .logo figure img {
+.wrapper header .top-header .logo figure img {
   max-height: 75px;
 }
-.wrapper header nav {
-  grid-area: nav;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-.wrapper header nav a {
-  text-decoration: none;
+.wrapper header .top-header .contacto {
+  grid-area: contacto;
   color: #26619a;
+}
+.wrapper header .main-menu {
+  display: flex;
+  background-color: #26619a;
+}
+.wrapper header .main-menu .menu {
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper header .main-menu .menu ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  list-style: none;
+}
+.wrapper header .main-menu .menu .menu-item {
+  padding: 1em 0.5em;
+  margin: 0 0.1em;
+  cursor: pointer;
+  min-width: 8em;
+  text-align: center;
+  position: relative;
+}
+.wrapper header .main-menu .menu .menu-item[aria-haspopup=true] {
+  border-bottom-color: #d4e8f5;
+}
+.wrapper header .main-menu .menu .menu-item:hover {
+  background-color: #204f7f;
+}
+.wrapper header .main-menu .menu .menu-item:hover .sub-menu, .wrapper header .main-menu .menu .menu-item:hover .sub-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.wrapper header .main-menu .menu a {
+  text-decoration: none;
+  color: white;
+}
+.wrapper header .main-menu .menu .sub-menu {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #204f7f;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  margin-top: 1.2em;
+  font-size: 0.8em;
+}
+.wrapper header .main-menu .menu .sub-menu .menu-item {
+  margin: 0.1em 0;
+  padding: 1em;
+  width: 10em;
+  text-align: center;
+}
+.wrapper header .main-menu .menu .sub-menu .menu-item:hover {
+  border: 1px solid #d4e8f5;
 }
 .wrapper .mobil-nav {
   display: none;

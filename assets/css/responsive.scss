@@ -75,21 +75,29 @@
 @media (max-width: 480px) {
   .wrapper {
     position: relative;
+
     header {
       grid-template-columns: 1fr;
 
-      .logo {
-        figure {
-          display: flex;
-          justify-content: center;
+      .top-header {
+        .logo {
+          figure {
+            display: flex;
+            justify-content: center;
+            width: 100%;
 
-          img {
-            max-height: 125px !important;
+            img {
+              max-height: 125px !important;
+            }
           }
+        }
+
+        .contacto {
+          display: none;
         }
       }
 
-      nav {
+      .main-menu {
         display: none;
       }
     }
